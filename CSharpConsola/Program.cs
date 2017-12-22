@@ -10,10 +10,11 @@ namespace CSharpConsola
     {
         static void Main(string[] args)
         {
-            int numeroUno = int.Parse(Console.ReadLine());
-            int numeroDos = int.Parse(Console.ReadLine());
-            int resultado = Geometria.Suma(numeroDos, numeroUno);
-            Console.WriteLine($"Resultado: {resultado}");
+            CuentaBancaria cuentaUno = new CuentaBancaria();
+            cuentaUno.Balance = -2000;
+
+            Console.WriteLine($"{cuentaUno.Balance}");
+
             Console.ReadLine();
         }
     }
