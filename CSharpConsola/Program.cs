@@ -13,9 +13,20 @@ namespace CSharpConsola
             CuentaBancaria cuentaUno = new CuentaBancaria();
             cuentaUno.Balance = -2000;
 
-            Console.WriteLine($"{cuentaUno.Balance}");
+            CuentaBancariaKids cuentaDos = new CuentaBancariaKids();
+            cuentaDos.Balance = 2000;
+
+            AgregarBalance(cuentaUno, 3000);
+            AgregarBalance(cuentaDos, 3000);
 
             Console.ReadLine();
+        }
+
+        static void AgregarBalance(ICuentaBancaria cuentaBancaria, double balance)
+        {
+            cuentaBancaria.AgregarABalance(balance);
+
+            Console.WriteLine($"{cuentaBancaria.Balance}");
         }
     }
 
